@@ -1,0 +1,36 @@
+<div class = "container">
+  <h3>Filtry</h3>
+<p>Państwo</p>
+<select [(ngModel)]="country" (ngModelChange)="passCountry()">
+  <option>-</option>
+  <option *ngFor="let country of countries">
+    {{country}}
+  <option>
+</select>
+<form [formGroup]="filtersForm">
+  <div class="form-group">
+    <label for="minPrice">Cena min</label>
+    <input id="minPrice" name="minPrice" type="number" formControlName="minPrice" [value]="currMinPrice" (input)="sendData()" >
+  </div>
+  <div class="form-group">
+    <label for="maxPrice">Cena max</label>
+    <input id="maxPrice" name="maxPrice" type="number" formControlName="maxPrice" [value]="currMaxPrice" (input)="sendData()">
+  </div>
+  <div class="form-group">
+    <label for="minRating">Ocena min</label>
+    <input id="minRating" name="minRating" type="number" formControlName="minRating" [value]="currMinRating" (input)="sendData()">
+  </div>
+  <div class="form-group">
+    <label for="maxRating">Ocena max</label>
+    <input id="maxRating" name="maxRating" type="number" formControlName="maxRating" [value]="currMaxRating" (input)="sendData()">
+  </div>
+  <div class="form-group">
+    <label for="startDate">Data wyjazdu (po)</label>
+    <input id="startDate" name="startDate" type="date" formControlName="startDate" (input)="sendData()">
+  </div>
+  <div class="form-group">
+    <label for="endDate">Data wyjazdu (do)</label>
+    <input id="endDate" name="endDate" type="date" formControlName="endDate" (input)="sendData()" >
+  </div>
+</form>
+</div>

@@ -1,0 +1,52 @@
+.container{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+  width: 450px;
+  height: 450px;
+  font-size: 110%;
+  padding:20px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+.form-group{
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container p{
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.container select{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 308px;
+  font-size: 120%;
+}
+.container label{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
+}
+.container input{
+  font-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+.container h3{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}

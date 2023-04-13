@@ -1,0 +1,7 @@
+<div class = "container" [ngStyle]="{'padding':summ>0 ? '20px': '0px'}">
+
+  <h2 class = "sumPrice" *ngIf="summ>0">{{summ}}€</h2>
+  <div *ngFor="let i of items">
+      <p>{{i[1]}}× {{i[0]}}  {{i[2]}}€</p>
+  </div>
+</div>

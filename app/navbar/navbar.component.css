@@ -1,0 +1,67 @@
+#navContainer{
+  margin:none;
+  position: relative;
+  display:flex;
+  width: 98vw;
+  background-color: lightblue;
+  height: 70px;
+  z-index: 30;
+}
+#leftSide{
+  padding-left: 5%;
+  width:inherit;
+  margin-top: 0px;
+}
+#rightSide{
+  display: flex;
+
+  position: relative;
+  justify-content: right;
+  width:1200px;
+  margin-top: 0px;
+}
+#logo{
+  width: 180px;
+  padding: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  background-color: white;
+  color: rgb(3, 130, 180);
+  border:1px solid rgb(3, 130, 180);
+  cursor: pointer;
+}
+#rightSide button{
+  padding:20px;
+  width: 110px;
+  margin-top: 5px;
+  margin-left: 20px;
+  position:relative;
+  background-color: white;
+  color: rgb(3, 130, 180);
+  border:1px solid rgb(3, 130, 180);
+  cursor: pointer;
+}
+#rightSide #nick{
+  padding: 0px;
+  height: fit-content;
+
+}
+#rightSide #nick p{
+  font-size: 180%;
+  padding:0px;
+  height: fit-content;
+}
+.nick{
+
+  width: fit-content;
+  position: relative;
+  padding: 5px;
+  font-size: 200%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+
+}

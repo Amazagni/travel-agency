@@ -1,0 +1,79 @@
+.container{
+  background-color: rgb(3, 130, 180);
+  margin-top: 50px;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.7);
+}
+.logo{
+  height: 250px;
+  border-radius: 50%;
+  top:100px;
+  position: absolute;
+  left: 19%;
+}
+.beach{
+  margin: none;
+  border-radius: 30px;
+  height: 350px;
+  position: absolute;
+  top: 350px;
+  left:31%;
+}
+
+.container h3{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2{
+  position: absolute;
+  top:80px;
+  left: 38%;
+  font-size: 600%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+
+iframe{
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  margin-bottom: 50px;
+}
+.top{
+  height: 98vh;
+  width: 98vw;
+  background: linear-gradient(160deg, rgb(3, 130, 180) 50%,lightblue 50%);
+}
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact{
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  display: block;
+  right: 0px;
+  top:50%;
+}
+.bottom{
+  display: block;
+  position: relative;
+}
+.bottom p {
+  font-size: 110%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}

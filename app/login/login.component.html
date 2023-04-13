@@ -1,0 +1,17 @@
+<div class="container">
+
+ <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+      <label>Email
+        <input formControlName="email" type="email">
+      </label>
+      <label>Hasło
+        <input autocomplete="off" formControlName="password" type="password">
+      </label>
+      <div *ngIf="firebaseErrorMessage != ''" class="error">
+        <p>{{firebaseErrorMessage}}</p>
+      </div>
+      <button type="submit">Zaloguj</button>
+  </form>
+
+</div>
+<h3>Nie masz konta?<a routerLink="/rejestracja"> ZAREJESTRUJ SIĘ </a> już teraz</h3>

@@ -1,0 +1,125 @@
+{
+  "trips": [
+    {
+      "name": "Dąbrowa Tarnowska",
+      "country": "Polska",
+      "startDate": "09.27.2022",
+      "endDate": "09.31.2022",
+      "price": 500,
+      "description": "Może nie jest ładnie, ale za to tanio",
+      "imgl": "assets/imgs/dabrowa.jpg",
+      "quantity": 6,
+      "rating": 3.4,
+      "ratingNumber":5
+    },
+    {
+      "name": "Raciniewo",
+      "country": "Polska",
+      "startDate": "12.07.2022",
+      "endDate": "01.30.2023",
+      "price": 1200,
+      "description": "Miejsce sławnych wyczynów kaskaderskich",
+      "imgl": "assets/imgs/raciniewo.jpg",
+      "quantity": 6,
+      "rating": 4.4,
+      "ratingNumber":230
+    },
+    {
+      "name": "Sosnowiec",
+      "country": "Polska",
+      "startDate": "02.01.2023",
+      "endDate": "02.10.2023",
+      "price": 3500,
+      "description": "Jedno z najbardziej rozpoznawalnych polskich miast",
+      "imgl": "assets/imgs/sosnowiec.webp",
+      "quantity": 6,
+      "rating": 3,
+      "ratingNumber":1
+    },
+    {
+      "name": "Bydgoszcz",
+      "country": "Polska",
+      "startDate": "12.11.2022",
+      "endDate": "12.27.2022",
+      "price": 5800,
+      "description": "Nowoczesne i bogate miasto polskie",
+      "imgl": "assets/imgs/bydgoszcz.jpg",
+      "quantity": 8,
+      "rating": 1,
+      "ratingNumber":16
+    },
+    {
+      "name": "Dubaj",
+      "country": "Zjednoczone Emiraty Arabskie",
+      "startDate": "12.10.2022",
+      "endDate": "01.01.2023",
+      "price": 999999,
+      "description": "Ładnie, ale niestety drogo",
+      "imgl": "assets/imgs/dubaj.jpg",
+      "quantity": 2,
+      "rating": 3.5,
+      "ratingNumber":52
+    },
+    {
+      "name": "Radom",
+      "country": "Polska",
+      "startDate": "12.10.2022",
+      "endDate": "12.11.2022",
+      "price": 1300,
+      "description": "Nie jest ani ładnie ani tanio",
+      "imgl": "assets/imgs/radom.jpg",
+      "quantity": 7,
+      "rating": 1,
+      "ratingNumber":53
+    },
+    {
+      "name": "Malta",
+      "country": "Malta",
+      "startDate": "12.10.2022",
+      "endDate": "12.26.2022",
+      "price": 7000,
+      "description": "Ciepły i długi odpoczynek",
+      "imgl": "assets/imgs/matla.jpg",
+      "quantity": 4,
+      "rating": 2.4,
+      "ratingNumber":56
+    },
+    {
+      "name": "Kraków",
+      "country": "Polska",
+      "startDate": "12.10.2022",
+      "endDate": "12.16.2022",
+      "price": 2500,
+      "description": "Miasto najlepszych uczelni",
+      "imgl": "assets/imgs/krakow.jpg",
+      "quantity": 3,
+      "rating": 4,
+      "ratingNumber":25
+    },
+    {
+      "name": "Ateny",
+      "country": "Grecja",
+      "startDate": "12.10.2022",
+      "endDate": "12.15.2022",
+      "price": 1300,
+      "description": "Miasto z wieloma pięknymi zabytkami",
+      "imgl": "assets/imgs/ateny.jpeg",
+      "quantity": 6,
+      "rating": 4,
+      "ratingNumber":1
+    },
+    {
+      "name": "Tarnów",
+      "country": "Polska",
+      "startDate": "12.09.2022",
+      "endDate": "12.13.2022",
+      "price": 1400,
+      "description": "Można tam znaleźć niesamowite ELITARNE liceum",
+      "imgl": "assets/imgs/tarnow.jpg",
+      "quantity": 23,
+      "rating": 4.2,
+      "ratingNumber":2
+    }
+
+  ]
+}

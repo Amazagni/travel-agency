@@ -1,0 +1,48 @@
+<div class = "container">
+  <div class = "reserved" [ngStyle]="{'background-color': booked > 10 ? 'green':'red'}">
+    <p >Zarezerwowano {{booked}} wycieczek</p>
+  </div>
+
+  <h3>{{trip.name | uppercase}}</h3>
+  <h4>{{trip.country | uppercase}}</h4>
+  <img src="{{trip.imgl}}">
+  <p class = "date">{{trip.startDate}} − {{trip.endDate}}</p>
+  <p class = "description">{{trip.description}}</p>
+  <button class = "addDel" id = "plus" (click)="plusClick()" [ngStyle]="{'opacity':trip.plusFlag === true ? '1': '0'}">Zarezerwuj</button>
+  <button class = "addDel" id = "minus" (click)="minusClick()" [ngStyle]="{'opacity':trip.minusFlag === true ? '1': '0'}">Zwróć</button>
+  <p class = "price">{{trip.price}} €</p>
+
+  <div *ngIf="!trip.voted"><star-rating labelText="{{trip.rating}} ({{trip.ratingNumber}})" [starType]="'svg'"
+  (starClickChange)="vote($event)" [disabled]=trip.voted staticColor="negative" size="large" [rating]="0"></star-rating></div>
+
+  <div *ngIf="trip.voted"><star-rating labelText="{{trip.rating}} ({{trip.ratingNumber}})" [starType]="'svg'"
+    (starClickChange)="vote($event)" [disabled]="firebaseService.getUser().banned || !showVote" staticColor="negative" size="large" [rating]="trip.rating"></star-rating></div>
+
+
+  <div class = "allertContainer">
+    <p *ngIf="trip.quantity<4&&trip.quantity>1">Pozostały tylko {{trip.quantity}} miejsca!</p>
+    <p *ngIf="trip.quantity==1">Pozostało tylko {{trip.quantity}} miejsce!</p>
+    <p id = "out" *ngIf="trip.quantity==0">Brak wolnych miejsc!</p>
+  </div>
+  <div *ngFor="let i of opinions">
+    <div>
+      <h3 id="nickLine">{{i[0]}}</h3>
+      <p>{{i[2]}}</p>
+      <p *ngIf="i[4]">{{i[3]}}</p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="!firebaseService.getUser().banned &&(firebaseService.getUser().manager || showMenu)"class="formContainer">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="name">Nazwa wycieczki</label>
+    <input required minlength="2" id="name" name="name" type="text" formControlName="name">
+    <label for="description">Opis</label>
+    <input required minlength="50" maxlength="500" id="description" name="description" type="text" formControlName="description">
+    <label for="date">Data</label>
+    <input id="date" name="date" type="date" formControlName="date" (change)="dateChanged()">
+    <button id="submit" type="submit">➔</button>
+  </form>
+</div>

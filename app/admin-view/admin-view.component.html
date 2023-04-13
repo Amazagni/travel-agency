@@ -1,0 +1,45 @@
+<!--<form [formGroup]="banForm" (ngSubmit)="ban()">
+  <label>Nazwa
+    <input formControlName="name" type="text">
+  </label>
+
+  <button type="submit">BAN</button>
+</form>-->
+<div class="page">
+  <div class = "users">
+    <div class = "user"><p>Nazwa użytkownika</p><p>Rola</p>
+    </div>
+    <div *ngFor="let i of users">
+      <div class = "user"><p id = "name">{{i.name}}</p>
+        <p *ngIf="i.admin">admin</p>
+        <p *ngIf="i.client">klient</p>
+        <p *ngIf="i.manager">manager</p>
+        <p *ngIf="!i.admin || !i.manager"></p>
+        <p *ngIf="i.banned">zbanowany</p>
+        <p *ngIf="!i.banned"></p>
+        <button class = "control" (click)="ban(i)"><p *ngIf="!i.banned">BAN</p><p *ngIf="i.banned">UNBAN</p></button>
+        <button class = "control" (click)="managerChange(i)"><p *ngIf="!i.manager">USTAW MANAGER</p><p *ngIf="i.manager">USUN MANAGER</p></button>
+        <button class = "control" (click)="adminChange(i)"><p *ngIf="!i.admin">USTAW ADMIN</p><p *ngIf="i.admin">USUN ADMIN</p></button>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/oferta/dodaj" class = "addIcon"><img src="assets/imgs/add.png"></a>
+  <div class = "container">
+
+    <!-- CARDS -->
+    <div class = "card" *ngFor="let i of trips">
+      <div class = "background">
+        <img src ="{{i.imgl}}">
+        <h3>{{i.name | uppercase}}</h3>
+        <h4>{{i.country | uppercase}}</h4>
+        <p class = "date">{{i.startDate}} − {{i.endDate}}</p>
+        <p class = "description">{{i.description}}</p>
+        <p class = "price">{{i.price}} €</p>
+        <div class = "allertContainer">
+          <p> {{i.quantity}} </p>
+        </div>
+        <button class = "delete" (click)="deleteTrip(i)">Usuń wycieczkę</button>
+      </div>
+    </div>
+  </div>
+</div>

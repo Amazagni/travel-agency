@@ -1,0 +1,64 @@
+<!-- CART -->
+<div class = "cartSet">
+  <div class = "cartContainer">
+    <app-cart [item]="cartSend" [summ]="cartSumm"></app-cart>
+  </div>
+</div>
+
+<a routerLink="/oferta/koszyk" class = "cartIcon"><img src="assets/imgs/cart.jpg"></a>
+
+
+<div class = "body">
+  <!-- RESERVED -->
+<div class = "reserved" [ngStyle]="{'background-color': booked > 10 ? 'green':'red'}">
+  <p >Zarezerwowano {{booked}} wycieczek</p>
+</div>
+
+  <!-- FILTERS -->
+<div class = "filtrContainer">
+<app-filters
+[currMaxPrice]="highestPrice" [currMinPrice]="lowestPrice"
+[currMaxRating]="highestRating" [currMinRating]="lowestRating"
+[countries]="countries"
+(sendMinPrice)="updateMinPrice($event)" (sendMaxPrice)="updateMaxPrice($event)"
+(sendMinRating)="updateMinRating($event)" (sendMaxRating)="updateMaxRating($event)"
+(sendEndDate)="updateEndDate($event)" (sendStartDate)="updateStartDate($event)"
+(sendCountry)="updateCountry($event)">
+</app-filters>
+</div>
+<div class = "container">
+
+  <!-- CARDS -->
+  <div class = "card" *ngFor="let i of trips">
+    <div class = "background" [ngStyle]="{'box-shadow': '0px 0px 10px 2px ' + getBorder(i) }">
+
+      <a routerLink="/oferta/{{i.name}}"><img src ="{{i.imgl}}"></a>
+      <h3>{{i.name | uppercase}}</h3>
+      <h4>{{i.country | uppercase}}</h4>
+      <p class = "date">{{i.startDate}} − {{i.endDate}}</p>
+      <p class = "description">{{i.description}}</p>
+      <button class = "addDel" id = "plus" (click)="plusClick(i)" [ngStyle]="{'opacity':i.plusFlag === true ? '1': '0'}">+</button>
+      <button class = "addDel" id = "minus" (click)="minusClick(i)" [ngStyle]="{'opacity':i.minusFlag === true ? '1': '0'}">−</button>
+      <p class = "price">{{i.price}} €</p>
+
+      <!-- RATING -->
+      <star-rating labelText={{i.rating}} [starType]="'svg'"
+      (starClickChange)="vote($event,i)" [disabled]=true staticColor="negative" size="large" [rating]="i.rating"></star-rating>
+
+      <div class = "allertContainer">
+        <p *ngIf="i.quantity<4&&i.quantity>1">Pozostały tylko {{i.quantity}} miejsca!</p>
+        <p *ngIf="i.quantity==1">Pozostało tylko {{i.quantity}} miejsce!</p>
+        <p id = "out" *ngIf="i.quantity==0">Brak wolnych miejsc!</p>
+      </div>
+     <!-- <button class = "delete" (click)="deleteTrip(i)">Usuń wycieczkę</button> -->
+    </div>
+  </div>
+</div>
+
+<!-- ADD TRIP FORM
+  <div class = "form">
+    <app-add-trip (sendTrip)="pushTrip($event)"></app-add-trip>
+  </div>
+-->
+
+</div>

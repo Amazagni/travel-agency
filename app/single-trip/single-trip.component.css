@@ -1,0 +1,124 @@
+.reserved{
+  width: fit-content;
+  position:sticky;
+  top:90px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 220px;
+  z-index: 30;
+}
+.reserved p{
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  font-size: 100%;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(3, 130, 180);
+}
+h3,h4{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 200%;
+}
+img{
+  height: 500px;
+  border-radius:30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.date,.description{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.description{
+  font-size: 120%;
+}
+
+.addDel{
+  height: 100px;
+  width: 300px;
+  font-size: 250%;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+#plus{
+  background-color: rgb(20, 176, 20);
+}
+#minus{
+  background-color: red;
+}
+.price{
+  font-size: 350%;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+.allertContainer{
+  height: 100px;
+  display: block;
+  margin-top: 20px;
+}
+.allertContainer p{
+  color: white;
+  font-size: 180%;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#out{
+  color:red;
+}
+
+input{
+  font-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: block;
+}
+label{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
+}
+#submit{
+  font-size: 150%;
+  color:white;
+  background-color: rgb(4, 216, 4);
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 20px;
+  border: 2px solid white;
+}
+
+.formContainer{
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 30px;
+  width: fit-content;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#nickLine{
+  margin-left: 10px;
+  size: 100%;
+}
+

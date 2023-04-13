@@ -1,0 +1,41 @@
+.container{
+  font-size: 150%;
+background-color: lightblue;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+.element{
+  display: flex;
+  justify-content: center;
+}
+#before{
+  background-color: rgb(51, 198, 51);
+}
+#current{
+  background-color: yellow;
+}
+#after{
+  background-color: red;
+}
+.state{
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: 10px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  justify-content: center;
+}
+h3{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}

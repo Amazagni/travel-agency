@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="!flag">
+    <h3>Historia jest pusta</h3>
+  </div>
+  <div *ngFor="let i of history">
+    <p>Kupiono: {{i[1].toDate() | date:'yyyy/MM/dd h:mm:ss a'}}</p>
+    <div class="element">
+
+      <p>{{i[0][1]}}× {{i[0][0]}} {{i[0][2]}} {{i[0][3]}} - {{i[0][4]}}</p>
+      <div *ngIf=" currDate < toDate(i[0][3])">
+        <div class="state" id="before">Zakupiona</div>
+        <br>
+      </div>
+
+      <div *ngIf=" currDate <= toDate(i[0][4]) && currDate >= toDate(i[0][3])">
+        <div class="state" id="current">W trakcie</div>
+        <br>
+      </div>
+
+      <div *ngIf=" currDate > toDate(i[0][4])">
+        <div class="state" id="after">Odbyta</div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+

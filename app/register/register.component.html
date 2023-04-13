@@ -1,0 +1,14 @@
+<div class = "container">
+  <form [formGroup]="signupForm" (ngSubmit)="signup()">
+      <label>Email
+        <input formControlName="email" type="email">
+      </label>
+      <label>Hasło
+        <input autocomplete="off" formControlName="password" type="password">
+      </label>
+      <div *ngIf="firebaseErrorMessage != ''" class="error">
+        <p>{{firebaseErrorMessage}}</p>
+      </div>
+      <button type="submit">Zarejestruj</button>
+  </form>
+</div>

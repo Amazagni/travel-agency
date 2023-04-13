@@ -1,0 +1,15 @@
+<div class = "container">
+  <div *ngIf="sumPrice==0">
+    <h3>KOSZYK JEST PUSTY</h3>
+  </div>
+  <div *ngIf="sumPrice!=0">
+    <h1>{{sumPrice}}</h1>
+    <div *ngFor="let i of cart">
+      <div class = "option">
+        <h2>{{i[1]}}× {{i[0]}} {{i[2]}}</h2>
+        <button (click)="buy(i)">Kup</button>
+      </div>
+    </div>
+  </div>
+</div>
+

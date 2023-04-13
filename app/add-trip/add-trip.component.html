@@ -1,0 +1,39 @@
+<div class = "container">
+  <form [formGroup]="tripForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="namef">Nazwa wycieczki</label>
+      <input required minlength="2" id="namef" name="namef" type="text" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="country">Państwo</label>
+      <input required minlength="2" id="country" name="country" type="text" formControlName="country">
+    </div>
+    <div class="form-group">
+      <label for="startDate">Data wyjazdu</label>
+      <input required minlength="2" placeholder="MM.DD.RRRR" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"  id="startDate" name="startDate" type="text" formControlName="startDate">
+    </div>
+    <div class="form-group">
+      <label for="endDate">Data powrotu</label>
+      <input required pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}" placeholder="MM.DD.RRRR" id="endDate" name="endDate" type="text" formControlName="endDate">
+    </div>
+    <div class="form-group">
+      <label for="price">Cena</label>
+      <input required pattern="[0-9]*"id="price" name="price" type="text" formControlName="price">
+    </div>
+    <div class="form-group">
+      <label for="description">Opis</label>
+      <input required minlength="2" id="description" name="description" type="text" formControlName="description">
+    </div>
+    <div class="form-group">
+      <label for="quantity">Ilość miejsc</label>
+    <input required pattern="[0-9]*" id="quantity" name="quantity" type="text" formControlName="quantity">
+  </div>
+  <div class="form-group">
+    <label for="imgl">Zdjęcie</label>
+    <input required placeholder = "Ścieżka do zdjęcia" minlength="2" id="imgl" name="imgl" type="text" formControlName="imgl">
+  </div>
+  <button type="submit">➔</button>
+</form>
+</div>
+
+

@@ -1,0 +1,17 @@
+<div id = navContainer>
+
+
+  <a routerLink="/"><button id = "logo">STRONA GŁÓWNA</button></a>
+ <a *ngIf="firebaseService.getUser().manager" routerLink="/widok/manager"><button id = "logo">WIDOK MANAGERA</button></a>
+  <a *ngIf="firebaseService.getUser().admin" routerLink="/widok/admin"><button id = "logo">WIDOK ADMINA</button></a>
+
+      <div id = "rightSide">
+        <a routerLink="/oferta"><button id = "onas">OFERTA</button></a>
+        <a routerLink="/historia"><button id = "kontakt">HISTORIA</button></a>
+        <a *ngIf="!(afAuth.user | async)" routerLink="/logowanie"><button id = "logowanie">ZALOGUJ</button></a>
+        <a *ngIf="(afAuth.user | async)"><button id = "logowanie" (click)="logout()">WYLOGUJ</button></a>
+        <!--<a><button id="nick"><p>{{userNameService.getUserName()}}</p></button></a>-->
+        <div class="nick"><p>{{userNameService.getUserName()}}</p></div>
+      </div>
+
+</div>
